@@ -19,9 +19,13 @@ namespace ConsoleApplication
         /// </summary>
         public static void Main()
         {
-            var train = new Train();
-            train.StartEngines();
-            Console.WriteLine("Hello World!");
+            /// En el caso que habia que crear 10.000.000 trenes pasa:
+            /// Comienza a clrear objetos y cuando se queda sin espacio empieza a destruir y que en un loop
+            Train t1 = new Train("Last Train To London");
+            Train t2 = new Train("Last Train To London");
+            Train t3 = new Train("Runaway Train");
+            Console.WriteLine(t1==t2); /// False
+            Console.WriteLine(t2==t3); /// False  
         }
     }
 }
